@@ -1,0 +1,8 @@
+// Colors
+
+// px to rem convertor
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
