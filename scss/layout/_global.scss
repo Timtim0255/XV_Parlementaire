@@ -3,3 +3,31 @@ body {
   font-size: rem(xxx);
   color: xxx;
 }
+
+.ytvideo {
+}
+
+a {
+  text-decoration: underline;
+  color: $darkred;
+}
+
+h1 {
+  color: $verydarkblue;
+  @include font_1_bold;
+}
+
+h2 {
+  color: $verydarkblue;
+  @include font_1_bold;
+}
+
+h3 {
+  color: $verydarkgrey;
+  @include font_1_bold;
+}
+
+h4 {
+  color: $verydarkgrey;
+  @include font_1_bold;
+}
