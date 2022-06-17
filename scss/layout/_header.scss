@@ -1,3 +1,53 @@
 //*********************************************** HEADER *************************************************
 
+header {
+  background-color: #ffffff;
+  position: relative;
+  .header-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: rem(0) rem(0) rem(0) rem(37);
+    a {
+      @include font_1_bold();
+      font-size: rem(14);
+      color: $darkblue;
+      text-decoration: none;
+      div {
+        height: rem(54);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .logo {
+    top: rem(10.78);
+    left: rem(-15);
+    width: rem(61);
+    position: absolute;
+  }
+}
+
+.intro {
+  width: 55%;
+  padding: rem(50) rem(100) rem(50) rem(100);
+}
+
+.bulshit-box {
+  background-color: $darkblue;
+  padding: rem(50);
+  width: 100%;
+  .bulshit {
+    background-color: $darkblue;
+    color: #ffffff;
+    padding: rem(40) rem(50) rem(40) rem(50);
+    border: rem(12) solid #ffffff;
+    img {
+      width: 10%;
+      opacity: 20%;
+    }
+  }
+}
+
 //********************************************************************************************************

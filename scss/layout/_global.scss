@@ -2,9 +2,18 @@ body {
   @include font_1_regular();
   font-size: rem(16);
   background-color: lightblue;
-  margin: rem(30) rem(0) rem(0) rem(15);
+  margin: 0 auto;
+  max-width: rem(1440);
 }
 
+// Center body
+.container {
+  background-color: #ceeaf4;
+  margin: 0 auto;
+  max-width: rem(1050);
+}
+
+// Links
 a {
   text-decoration: underline;
   color: $darkred;
@@ -13,6 +22,7 @@ a {
   }
 }
 
+// Titres
 h1 {
   @include font_1_bold;
   color: $verydarkblue;
@@ -20,7 +30,6 @@ h1 {
   margin: rem(0) rem(0) rem(22) rem(0);
   padding: rem(0);
 }
-
 h2 {
   @include font_1_bold;
   color: $verydarkblue;
@@ -28,29 +37,27 @@ h2 {
   margin: rem(0) rem(0) rem(11) rem(0);
   padding: rem(0);
 }
-
 h3 {
   @include font_1_bold;
-  color: $verydarkgrey;
+  color: $verydarkblue;
   font-size: rem(21);
   margin: rem(0) rem(0) rem(10) rem(0);
   padding: rem(0);
 }
-
 h4 {
   @include font_1_bold;
-  color: $verydarkgrey;
+  color: $verydarkblue;
   font-size: rem(16);
   margin: rem(0) rem(0) rem(8) rem(0);
   padding: rem(0);
 }
 
+// Listes
 ol {
   margin: rem(0) rem(0) rem(0) rem(23);
   padding: rem(0);
   line-height: rem(24);
 }
-
 .list1 {
   list-style: disc;
   margin: rem(13) rem(0) rem(0) rem(63);
@@ -74,6 +81,32 @@ ol {
   list-style: kannada;
 }
 
-.jump {
-  margin-top: rem(15);
+// Paragraphes
+p {
+  line-height: rem(24);
 }
+
+//**************** ANIMATION UNDERLINE ****************************************
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: rem(2.8);
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform: translate(rem(0), rem(2));
+  transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  background-color: $darkred;
+  transform: translate(rem(0), rem(14));
+}
+
+//***************************************************************************
