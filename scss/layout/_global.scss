@@ -1,33 +1,79 @@
 body {
-  @include (xxx);
-  font-size: rem(xxx);
-  color: xxx;
-}
-
-.ytvideo {
+  @include font_1_regular();
+  font-size: rem(16);
+  background-color: lightblue;
+  margin: rem(30) rem(0) rem(0) rem(15);
 }
 
 a {
   text-decoration: underline;
   color: $darkred;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 h1 {
-  color: $verydarkblue;
   @include font_1_bold;
+  color: $verydarkblue;
+  font-size: rem(40);
+  margin: rem(0) rem(0) rem(22) rem(0);
+  padding: rem(0);
 }
 
 h2 {
-  color: $verydarkblue;
   @include font_1_bold;
+  color: $verydarkblue;
+  font-size: rem(30);
+  margin: rem(0) rem(0) rem(11) rem(0);
+  padding: rem(0);
 }
 
 h3 {
-  color: $verydarkgrey;
   @include font_1_bold;
+  color: $verydarkgrey;
+  font-size: rem(21);
+  margin: rem(0) rem(0) rem(10) rem(0);
+  padding: rem(0);
 }
 
 h4 {
-  color: $verydarkgrey;
   @include font_1_bold;
+  color: $verydarkgrey;
+  font-size: rem(16);
+  margin: rem(0) rem(0) rem(8) rem(0);
+  padding: rem(0);
+}
+
+ol {
+  margin: rem(0) rem(0) rem(0) rem(23);
+  padding: rem(0);
+  line-height: rem(24);
+}
+
+.list1 {
+  list-style: disc;
+  margin: rem(13) rem(0) rem(0) rem(63);
+}
+.list2 {
+  list-style: circle;
+}
+.list3 {
+  list-style: square;
+}
+.list4 {
+  list-style: decimal;
+}
+.list5 {
+  list-style: georgian;
+}
+.list6 {
+  list-style: trad-chinese-informal;
+}
+.list7 {
+  list-style: kannada;
+}
+
+.jump {
+  margin-top: rem(15);
 }
