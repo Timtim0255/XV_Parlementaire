@@ -1,16 +1,10 @@
 body {
   @include font_1_regular();
   font-size: rem(16);
-  background-color: lightblue;
+  line-height: rem(25);
+  background-color: white;
   margin: 0 auto;
   max-width: rem(1440);
-}
-
-// Center body
-.container {
-  background-color: #ceeaf4;
-  margin: 0 auto;
-  max-width: rem(1050);
 }
 
 // Links
@@ -83,10 +77,11 @@ ol {
 
 // Paragraphes
 p {
-  line-height: rem(24);
+  line-height: rem(25);
 }
 
-//**************** ANIMATION UNDERLINE ****************************************
+//************************************** ANIMATION UNDERLINE ********************
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -100,13 +95,34 @@ p {
   bottom: 0;
   left: 0;
   background-color: #ffffff;
-  transform: translate(rem(0), rem(2));
+  transform: translate(rem(0), rem(-8));
   transition: transform 0.25s ease-out, background-color 0.25s ease-out;
 }
 
 .hover-underline-animation:hover:after {
   background-color: $darkred;
-  transform: translate(rem(0), rem(14));
+  transform: translate(rem(0), rem(-2));
 }
 
-//***************************************************************************
+//*********************************************** UNDERSCORE ********************
+
+.underscore {
+  display: inline-block;
+  position: relative;
+  &:hover {
+    cursor: grab;
+  }
+  &:active {
+    cursor: grabbing;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: rem(2.8);
+    bottom: 0;
+    left: 0;
+    background-color: $darkred;
+    transform: translate(rem(0), rem(-2));
+  }
+}

@@ -1,14 +1,19 @@
-//*********************************************** HEADER *************************************************
+//*************************************************** HEADER ****************
 
 header {
-  background-color: #ffffff;
   position: relative;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../../images/header_hp.png);
+  background-size: rem(1440);
+  background-repeat: no-repeat;
   .header-bar {
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: rem(0) rem(0) rem(0) rem(37);
+    padding: rem(0) rem(195) rem(0) rem(242);
     a {
       @include font_1_bold();
       font-size: rem(14);
@@ -23,15 +28,49 @@ header {
   }
   .logo {
     top: rem(10.78);
-    left: rem(-15);
+    left: rem(180);
     width: rem(61);
     position: absolute;
   }
 }
 
+.presentation {
+  padding: rem(0) rem(195) rem(0) rem(195);
+}
+
 .intro {
-  width: 55%;
-  padding: rem(50) rem(100) rem(50) rem(100);
+  position: relative;
+  left: 44%;
+  width: 56%;
+  background-color: #ffffff;
+  margin: rem(38) rem(0) rem(0) rem(0);
+  padding: rem(65) rem(100) rem(65) rem(100);
+  div {
+    h1 {
+      margin: rem(0) rem(0) rem(0) rem(0);
+    }
+  }
+  .middiv {
+    line-height: rem(25);
+    font-size: rem(16);
+    padding: rem(35.75) rem(0) rem(63) rem(0);
+  }
+  .ESPbtn {
+    a {
+      @include font_1_bold();
+      font-size: rem(13);
+      letter-spacing: rem(1.25);
+      text-decoration: none;
+      padding: rem(15) rem(29) rem(15) rem(29);
+      background-color: $darkblue;
+      color: white;
+      border-radius: rem(19);
+      transition: background-color 0.25s ease-out;
+      &:hover {
+        background-color: $verydarkgrey;
+      }
+    }
+  }
 }
 
 .bulshit-box {
@@ -39,15 +78,30 @@ header {
   padding: rem(50);
   width: 100%;
   .bulshit {
+    position: relative;
+    font-size: rem(21);
     background-color: $darkblue;
     color: #ffffff;
-    padding: rem(40) rem(50) rem(40) rem(50);
+    line-height: rem(31);
+    padding: rem(114) rem(165) rem(114) rem(165);
     border: rem(12) solid #ffffff;
-    img {
-      width: 10%;
+    :before {
+      display: block;
+      position: absolute;
+      top: rem(40);
+      left: rem(50);
+      width: rem(90);
+      content: url(../../images/guillemet-gauche.svg);
+      opacity: 20%;
+    }
+    :after {
+      display: block;
+      position: absolute;
+      bottom: rem(40);
+      right: rem(50);
+      width: rem(90);
+      content: url(../../images/guillemet-droit.svg);
       opacity: 20%;
     }
   }
 }
-
-//********************************************************************************************************
