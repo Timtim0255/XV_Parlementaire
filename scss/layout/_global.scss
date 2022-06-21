@@ -80,28 +80,28 @@ p {
   line-height: rem(25);
 }
 
-//************************************** ANIMATION UNDERLINE ********************
+//******************************* HEADER ANIMATION UNDERLINE ********************
 
-.hover-underline-animation {
+.header-underline-animation {
   display: inline-block;
   position: relative;
 }
 
-.hover-underline-animation:after {
+.header-underline-animation:after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 94%;
   height: rem(2.8);
   bottom: 0;
-  left: 0;
+  left: 3%;
   background-color: #ffffff;
   transform: translate(rem(0), rem(-8));
   transition: transform 0.25s ease-out, background-color 0.25s ease-out;
 }
 
-.hover-underline-animation:hover:after {
+.header-underline-animation:hover:after {
   background-color: $darkred;
-  transform: translate(rem(0), rem(-2));
+  transform: translate(rem(0), rem(-1));
 }
 
 //*********************************************** UNDERSCORE ********************
@@ -118,11 +118,35 @@ p {
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 94%;
     height: rem(2.8);
     bottom: 0;
-    left: 0;
+    left: 3%;
     background-color: $darkred;
-    transform: translate(rem(0), rem(-2));
+    transform: translate(rem(0), rem(-1));
   }
+}
+
+//******************************* FOOTER ANIMATION UNDERLINE ********************
+
+.footer-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.footer-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 94%;
+  height: rem(2.8);
+  bottom: 0;
+  left: 3%;
+  background-color: $darkred;
+  transform: translate(rem(0), rem(-8));
+  transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.footer-underline-animation:hover:after {
+  background-color: #ffffff;
+  transform: translate(rem(0), rem(0));
 }

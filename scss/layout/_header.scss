@@ -1,7 +1,6 @@
 //*************************************************** HEADER ****************
 
 header {
-  position: relative;
   margin: 0 auto;
   position: relative;
   background-image: url(../../images/header_hp.png);
@@ -14,13 +13,41 @@ header {
     align-items: center;
     justify-content: space-evenly;
     padding: rem(0) rem(195) rem(0) rem(242);
+    li {
+      ul {
+        display: none;
+        li {
+          border-top: 1px solid #c9c9c9;
+          &:first-of-type {
+            border-top: none;
+          }
+        }
+        a {
+          @include font_1_regular();
+          font-size: rem(12);
+          line-height: rem(36);
+          padding: rem(0) rem(19) rem(0) rem(19);
+          color: $verydarkgrey;
+          &:hover {
+            color: $darkred;
+          }
+        }
+      }
+      &:hover {
+        ul {
+          position: absolute;
+          display: block;
+          background-color: #ffffff;
+        }
+      }
+    }
     a {
       @include font_1_bold();
       font-size: rem(14);
       color: $darkblue;
       text-decoration: none;
+      padding: rem(13) rem(6) rem(13) rem(6);
       div {
-        height: rem(54);
         display: flex;
         align-items: center;
       }
@@ -44,7 +71,7 @@ header {
   width: 56%;
   background-color: #ffffff;
   margin: rem(38) rem(0) rem(0) rem(0);
-  padding: rem(65) rem(100) rem(65) rem(100);
+  padding: rem(65) rem(100) rem(45) rem(100);
   div {
     h1 {
       margin: rem(0) rem(0) rem(0) rem(0);
@@ -53,19 +80,28 @@ header {
   .middiv {
     line-height: rem(25);
     font-size: rem(16);
-    padding: rem(35.75) rem(0) rem(63) rem(0);
+    padding: rem(35.75) rem(0) rem(48) rem(0);
   }
   .ESPbtn {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
     a {
+      display: block;
+      width: fit-content;
       @include font_1_bold();
       font-size: rem(13);
-      letter-spacing: rem(1.25);
+      letter-spacing: rem(1.22);
+      line-height: rem(19.5);
       text-decoration: none;
+      text-transform: uppercase;
       padding: rem(15) rem(29) rem(15) rem(29);
       background-color: $darkblue;
       color: white;
+      outline: none;
       border-radius: rem(19);
-      transition: background-color 0.25s ease-out;
+      transition: 0.25s;
       &:hover {
         background-color: $verydarkgrey;
       }

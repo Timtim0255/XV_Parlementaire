@@ -1,6 +1,7 @@
 //**************************************************** CORPS ****************
 
 .corps {
+  width: rem(1440);
   .actus {
     display: flex;
     flex-direction: column;
@@ -73,19 +74,26 @@
       padding: rem(4) rem(9) rem(4) rem(9);
     }
     .ESPbtn2 {
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
       margin: 0 auto;
-      margin-top: rem(62);
+      margin-top: rem(50);
       a {
+        display: block;
+        width: fit-content;
         @include font_1_bold();
         font-size: rem(13);
-        letter-spacing: rem(1.25);
+        letter-spacing: rem(1.22);
+        line-height: rem(19.5);
         text-decoration: none;
         text-transform: uppercase;
         padding: rem(15) rem(29) rem(15) rem(29);
         background-color: $darkblue;
-        color: white;
+        color: #ffffff;
+        outline: none;
         border-radius: rem(19);
-        transition: background-color 0.25s ease-out;
+        transition: 0.25s;
         &:hover {
           background-color: $verydarkgrey;
         }
@@ -94,8 +102,8 @@
   }
   .partenaires {
     position: relative;
-    color: white;
-    padding-bottom: rem(315);
+    color: #ffffff;
+    padding: rem(0) rem(195) rem(300) rem(195);
     &:before {
       content: "";
       background-color: $verydarkblue;
@@ -107,27 +115,114 @@
       z-index: -1;
     }
     .dmp {
+      @include font_2_bold();
+      text-transform: uppercase;
+      line-height: rem(22);
+      background-color: $darkred;
+      color: #ffffff;
+      padding: rem(47) rem(49) rem(47) rem(49);
+      margin: 0 auto;
+      margin-bottom: rem(156);
+      width: fit-content;
+    }
+    .partenariats {
+      text-align: center;
+      margin: 0 auto;
+      width: rem(580);
+      h2 {
+        color: #ffffff;
+      }
+      p {
+        margin-top: rem(36);
+      }
     }
     .carousel {
+      margin: rem(48) rem(0) rem(48) rem(0);
+      h1 {
+        text-align: center;
+        color: $darkred;
+      }
     }
     .ESPbtn3 {
       display: flex;
       justify-content: center;
+      box-sizing: border-box;
+      margin: 0 auto;
       margin-top: rem(48);
       a {
+        display: block;
+        width: fit-content;
         @include font_1_bold();
         font-size: rem(13);
         letter-spacing: rem(1.25);
+        line-height: rem(19.5);
         text-decoration: none;
         text-transform: uppercase;
         padding: rem(15) rem(29) rem(15) rem(29);
-        background-color: white;
+        background-color: #ffffff;
         color: $darkblue;
+        outline: none;
         border-radius: rem(19);
-        transition: background-color 0.25s ease-out, color 0.25s ease-out;
+        transition: 0.25s;
         &:hover {
           background-color: #e3e3e3;
           color: $darkred;
+        }
+      }
+    }
+  }
+  .equipe {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: rem(0) rem(195) rem(0) rem(195);
+    .equipe-img {
+      width: 82.67%;
+      transform: translateY(rem(-150));
+    }
+    .equipe-pres {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, rem(-150));
+      max-width: rem(580);
+      background-color: #ffffff;
+      padding: rem(50) rem(100) rem(50) rem(100);
+      .equipe-intro {
+        text-align: center;
+        h4 {
+          @include font_2_bold();
+          color: $darkred;
+          text-transform: uppercase;
+        }
+        p {
+          margin-top: rem(18);
+        }
+      }
+      .ESPbtn4 {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: rem(38);
+        a {
+          display: block;
+          width: fit-content;
+          @include font_1_bold();
+          font-size: rem(13);
+          letter-spacing: rem(1.22);
+          line-height: rem(19.5);
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: rem(15) rem(29) rem(15) rem(29);
+          background-color: $darkblue;
+          color: #ffffff;
+          outline: none;
+          border-radius: rem(19);
+          transition: 0.25s;
+          &:hover {
+            background-color: $verydarkgrey;
+          }
         }
       }
     }
