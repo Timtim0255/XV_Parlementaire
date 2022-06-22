@@ -102,7 +102,7 @@ p {
 
 .header-underline-animation:hover:after {
   background-color: $darkred;
-  transform: translate(rem(0), rem(-1));
+  transform: translate(rem(0), rem(0));
 }
 
 //*********************************************** UNDERSCORE ********************
@@ -124,7 +124,7 @@ p {
     bottom: 0;
     left: 3%;
     background-color: $darkred;
-    transform: translate(rem(0), rem(-1));
+    transform: translate(rem(0), rem(0));
   }
 }
 
