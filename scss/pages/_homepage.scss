@@ -191,7 +191,7 @@
       .equipe-intro {
         text-align: center;
         h4 {
-          @include font_2_bold();
+          @include font_2_extrabold();
           color: $darkred;
           text-transform: uppercase;
         }

@@ -20,15 +20,23 @@ footer {
     justify-content: space-between;
     padding: rem(0) rem(195) rem(0) rem(195);
     a {
-      @include font_2_bold();
-      font-weight: 400;
-      font-size: rem(14);
+      @include font_2_regular();
+      font-size: rem(16);
+      line-height: rem(22);
       color: #ffffff;
       text-decoration: none;
       padding: rem(11) rem(6) rem(11) rem(6);
-      div {
-        display: flex;
-        align-items: center;
+    }
+    .twitter {
+      display: inline-block;
+      position: relative;
+      width: rem(44);
+      background-image: url(../../images/icons/twitter.svg);
+      background-repeat: no-repeat;
+      background-size: rem(30) rem(30);
+      background-position: center;
+      .hidden-text {
+        visibility: hidden;
       }
     }
   }
