@@ -18,6 +18,6 @@
   "homepage": "https://github.com/Timtim0255/XV_parlementaire#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "glob-parent": ">=5.1.2"
+    "glob-parent": "^5.1.2"
   }
 }
