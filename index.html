@@ -130,13 +130,13 @@
         </div>
 
         <div class="carousel">
-          <button class="carousel__button" id="left">
+          <button class="carousel__button left">
             <img src="images/icons/arrow-white.svg" alt="" />
           </button>
 
           <div class="carousel__track-container">
             <ul class="carousel__track">
-              <li class="carousel__slide">
+              <li class="carousel__slide current-slide">
                 <img src="images/carousel/airbus.png" alt="Airbus" />
               </li>
               <li class="carousel__slide">
@@ -160,12 +160,12 @@
             </ul>
           </div>
 
-          <button class="carousel__button" id="right">
+          <button class="carousel__button right">
             <img src="images/icons/arrow-white.svg" alt="" />
           </button>
 
           <div class="carousel__nav">
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator current-slide"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
@@ -219,5 +219,7 @@
         </ul>
       </nav>
     </footer>
+
+    <script src="dist/js/carousel.js"></script>
   </body>
 </html>

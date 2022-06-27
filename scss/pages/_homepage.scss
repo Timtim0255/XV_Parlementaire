@@ -128,6 +128,7 @@
     .partenariats {
       text-align: center;
       margin: 0 auto;
+      margin-bottom: rem(40);
       width: rem(580);
       h2 {
         color: #ffffff;
@@ -156,24 +157,28 @@
         img {
           width: rem(12);
         }
-      }
-      #left {
-        left: rem(-50);
-        img {
-          transform: rotate(180deg);
+        &.left {
+          left: rem(-50);
+          img {
+            transform: rotate(180deg);
+          }
+        }
+        &.right {
+          right: rem(-50);
         }
       }
-      #right {
-        right: rem(-50);
-      }
       .carousel__track-container {
-        background-color: lightgreen;
+        background-color: #103969;
         height: 100%;
         position: relative;
+        overflow: hidden;
         .carousel__track {
           padding: 0;
           margin: 0;
           list-style: none;
+          position: relative;
+          height: 100%;
+          transition: transform 0.4s ease-in-out;
           .carousel__slide {
             position: absolute;
             top: 0;
@@ -184,6 +189,7 @@
       }
       .carousel__nav {
         display: flex;
+        align-items: center;
         justify-content: center;
         padding: rem(35) rem(0);
       }
@@ -195,6 +201,11 @@
         background-color: transparent;
         margin: rem(0) rem(8);
         cursor: pointer;
+        &.current-slide {
+          width: rem(21);
+          height: rem(21);
+          background-color: #ffffff;
+        }
       }
     }
     .ESPbtn3 {
