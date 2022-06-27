@@ -146,6 +146,26 @@
         height: 100%;
         object-fit: cover;
       }
+      .carousel__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: rem(0);
+        cursor: pointer;
+        img {
+          width: rem(12);
+        }
+      }
+      #left {
+        left: rem(-50);
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      #right {
+        right: rem(-50);
+      }
       .carousel__track-container {
         background-color: lightgreen;
         height: 100%;
@@ -162,13 +182,27 @@
           }
         }
       }
+      .carousel__nav {
+        display: flex;
+        justify-content: center;
+        padding: rem(35) rem(0);
+      }
+      .carousel__indicator {
+        border: rem(1.5) solid #ffffff;
+        border-radius: 50%;
+        width: rem(15);
+        height: rem(15);
+        background-color: transparent;
+        margin: rem(0) rem(8);
+        cursor: pointer;
+      }
     }
     .ESPbtn3 {
       display: flex;
       justify-content: center;
       box-sizing: border-box;
       margin: 0 auto;
-      margin-top: rem(48);
+      margin-top: rem(88);
       a {
         display: block;
         width: fit-content;
