@@ -128,7 +128,7 @@
     .partenariats {
       text-align: center;
       margin: 0 auto;
-      margin-bottom: rem(55);
+      margin-bottom: rem(60);
       width: rem(580);
       h2 {
         color: #ffffff;
@@ -137,89 +137,130 @@
         margin-top: rem(36);
       }
     }
-    .carousel {
+    /* début du css pour le carousel */
+
+    .carousel__freefrontend {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      height: rem(100);
-      width: rem(787);
-      padding: rem(0) rem(50) rem(0) rem(50);
-      margin: 0 auto;
-      img {
-        width: rem(200);
-        object-fit: contain;
-      }
-      .carousel__button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        border: rem(0);
-        cursor: pointer;
-        img {
-          width: rem(12);
-        }
-        &.left {
-          left: rem(-75);
-          img {
-            transform: rotate(180deg);
-          }
-        }
-        &.right {
-          right: rem(-75);
-        }
-      }
-      .carousel__track-container {
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        .carousel__track {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          position: relative;
-          height: 100%;
-          transition: transform 0.6s ease-in-out;
-          .carousel__slide {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-          }
-        }
-      }
-      .carousel__nav {
+      .carousel__scene {
         display: flex;
-        justify-content: space-evenly;
-        width: rem(75);
-        margin: 0 auto;
-        padding-top: rem(44);
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 440px;
+        height: 220px;
+        max-width: 95vw;
+        perspective: 240px;
+        .carousel__list {
+          width: 95%;
+          height: 170px;
+          padding: 0;
+          position: absolute;
+          transform: translateZ(-288px);
+          transform-style: preserve-3d;
+          transition: transform 1s;
+          list-style: none;
+          counter-reset: list-counter;
+          .carousel__cell {
+            position: absolute;
+            width: 420px;
+            height: 150px;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            color: white;
+            transition: transform 1.5s, opacity 1.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            counter-increment: list-counter;
+            background-color: rgba(7, 4, 4, 0.7);
+            img {
+              width: rem(390);
+              height: rem(140);
+              object-fit: contain;
+            }
+            &.selected {
+              border: 2px solid #a30000;
+              box-shadow: 0 0 6px 3px #a30000;
+            }
+          }
+        }
       }
-      .carousel__indicator {
-        border: rem(1.5) solid #ffffff;
-        border-radius: 50%;
-        width: rem(15);
-        height: rem(15);
-        margin: rem(3) rem(5) rem(3) rem(5);
-        background-color: transparent;
-        transition: 0.125s ease-in-out;
-        cursor: pointer;
-        &.current-dot {
-          width: rem(21);
-          height: rem(21);
-          margin: rem(0) rem(2) rem(0) rem(2);
-          background-color: #ffffff;
+      .carousel__controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-left: rem(50);
+        .previous-button,
+        .next-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 5px 0;
+          width: 50px;
+          height: 50px;
+          border: 2px solid #a30000;
+          border-radius: 50%;
+          background-color: transparent;
+          img {
+            width: 50%;
+            //border: 1px solid yellowgreen;
+          }
+        }
+
+        .previous-button {
+          img {
+            margin-bottom: 10%;
+            transform: rotate(-90deg);
+          }
+        }
+
+        .next-button {
+          img {
+            margin-top: 10%;
+            transform: rotate(90deg);
+          }
+        }
+
+        .previous-button:focus,
+        .next-button:focus {
+          outline: none;
+          box-shadow: 0 0 6px 3px $darkred;
         }
       }
     }
 
+    .carousel__cell:nth-child(1) {
+      transform: rotateX(360deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(2) {
+      transform: rotateX(422deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(3) {
+      transform: rotateX(504deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(4) {
+      transform: rotateX(576deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(5) {
+      transform: rotateX(648deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(6) {
+      transform: rotateX(720deg) translateZ(288px);
+    }
+
+    /*  fin du css pour le carousel  */
     .ESPbtn3 {
       display: flex;
       justify-content: center;
       box-sizing: border-box;
       margin: 0 auto;
-      margin-top: rem(125);
+      margin-top: rem(60);
       a {
         display: block;
         width: fit-content;

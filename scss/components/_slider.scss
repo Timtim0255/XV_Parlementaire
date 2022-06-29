@@ -1,0 +1,60 @@
+.main-carousel {
+  width: 80%;
+  margin: 0 auto;
+  .carousel-cell {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: rem(200);
+      height: rem(75);
+      object-fit: contain;
+    }
+  }
+  /* arrow color */
+  .flickity-prev-next-button {
+    width: rem(35);
+    height: rem(35);
+    border-radius: 50%;
+    background: none;
+  }
+  .flickity-prev-next-button .arrow {
+    fill: white;
+  }
+  .flickity-prev-next-button:hover {
+    background: none;
+  }
+  .flickity-prev-next-button.previous {
+    left: -56px;
+  }
+  .flickity-prev-next-button.next {
+    right: -56px;
+  }
+  /* shadow hover on tab */
+  .flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 5px #a30000;
+  }
+  /* position dots in carousel */
+  .flickity-page-dots {
+    bottom: -78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 1px solid white;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    width: 21px;
+    height: 21px;
+    background: white;
+  }
+}
