@@ -1,18 +1,32 @@
 //*************************************************** HEADER ****************
 
 header {
-  margin: 0 auto;
   position: relative;
   background-image: url(../../images/header_hp.png);
   background-size: rem(1440);
+  @media screen and (max-width: rem(1440)) {
+    width: 100vw;
+  }
   background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: -2;
   .header-bar {
-    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     padding: rem(0) rem(195) rem(0) rem(242);
+    position: relative; /* ---------------------- */
+    &:before {
+      content: "";
+      background-color: #ffffff;
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, rem(0));
+      z-index: -1;
+    } /* ---------------------- */
     li {
       ul {
         display: none;

@@ -1,9 +1,11 @@
 //*********************************************** FOOTER *************************************************
 
 footer {
-  position: relative;
-  margin: rem(10) rem(0) rem(0) rem(0);
   width: rem(1440);
+  @media screen and (max-width: rem(1440)) {
+    width: 100vw;
+  }
+  position: relative;
   &:before {
     content: "";
     background-color: $darkred;
