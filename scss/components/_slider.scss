@@ -1,6 +1,7 @@
 .main-carousel {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: rem(125);
   .carousel-cell {
     width: calc(100% / 3);
     display: flex;

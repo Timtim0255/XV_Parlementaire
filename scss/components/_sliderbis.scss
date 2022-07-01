@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+.carousel-main {
+  margin: rem(20) rem(0) rem(45) rem(0);
+  .carousel-cell {
+    p {
+      margin: rem(14) rem(0) rem(0) rem(0);
+    }
+  }
+}
+
+.carousel-nav {
+  width: rem(780);
+  margin: 0 auto;
+  margin-bottom: rem(125);
+  .carousel-cell {
+    width: rem(180);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(0) rem(0) rem(0) rem(20);
+    img {
+      width: max-content;
+      object-fit: contain;
+      opacity: 0.75;
+      transition: all 0.1s ease-in-out;
+    }
+    &.is-nav-selected {
+      img {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+  /* arrow color */
+  .flickity-prev-next-button {
+    width: rem(35);
+    height: rem(35);
+    border-radius: 50%;
+    background: none;
+  }
+  .flickity-prev-next-button .arrow {
+    fill: $darkred;
+  }
+  .flickity-prev-next-button:hover {
+    background: none;
+  }
+  .flickity-prev-next-button.previous {
+    left: -100px;
+  }
+  .flickity-prev-next-button.next {
+    right: -100px;
+  }
+  /* shadow hover on tab */
+  .flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 5px $darkred;
+  }
+  /* position dots in carousel */
+  .flickity-page-dots {
+    bottom: -64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 1px solid $darkred;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    width: 21px;
+    height: 21px;
+    background: $darkred;
+  }
+}
+
+// .main-carousel {
+//   width: rem(780);
+//   margin: 0 auto;
+//   margin-bottom: rem(125);
+//   border: rem(2) solid #c90000;
+//   .carousel-cell {
+//     width: rem(180);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: rem(0) rem(0) rem(0) rem(20);
+//     border: rem(2) solid #c96100;
+//     img {
+//       width: max-content;
+//       object-fit: contain;
+//       border: rem(2) solid #c99000;
+//     }
+//   }
+//   /* arrow color */
+//   .flickity-prev-next-button {
+//     width: rem(35);
+//     height: rem(35);
+//     border-radius: 50%;
+//     background: none;
+//   }
+//   .flickity-prev-next-button .arrow {
+//     fill: $darkred;
+//   }
+//   .flickity-prev-next-button:hover {
+//     background: none;
+//   }
+//   .flickity-prev-next-button.previous {
+//     left: -100px;
+//   }
+//   .flickity-prev-next-button.next {
+//     right: -100px;
+//   }
+//   /* shadow hover on tab */
+//   .flickity-button:focus {
+//     outline: none;
+//     box-shadow: 0 0 5px 5px $darkred;
+//   }
+//   /* position dots in carousel */
+//   .flickity-page-dots {
+//     bottom: -64px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   /* white circles */
+//   .flickity-page-dots .dot {
+//     width: 12px;
+//     height: 12px;
+//     opacity: 1;
+//     background: transparent;
+//     border: 1px solid $darkred;
+//   }
+//   /* fill-in selected dot */
+//   .flickity-page-dots .dot.is-selected {
+//     width: 21px;
+//     height: 21px;
+//     background: $darkred;
+//   }
+// }
+//

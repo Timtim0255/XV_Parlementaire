@@ -1,0 +1,132 @@
+//*********************************************** ACTU CORPS ****************
+
+.presentation-match {
+  padding: rem(0) rem(195) rem(0) rem(195);
+  margin: rem(38) rem(0) rem(0) rem(0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .titre {
+    background-color: $darkblue;
+    color: #ffffff;
+    width: 70%;
+    padding: rem(7) rem(15) rem(11) rem(15);
+  }
+  .recap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    background-color: #ffffff;
+    padding: rem(29) rem(62) rem(50) rem(62);
+    div {
+      h1 {
+        margin: rem(0) rem(0) rem(0) rem(0);
+        line-height: rem(60);
+      }
+      p {
+        font-size: rem(16);
+        line-height: rem(24);
+      }
+    }
+    .equipes {
+      margin: rem(30) rem(0) rem(0) rem(0);
+      display: flex;
+      flex-direction: row;
+      .equipe-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        img {
+          filter: drop-shadow(0px 0px 2px #011a63);
+        }
+      }
+      .match-date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(0) rem(40) rem(0) rem(40);
+        h2 {
+          font-size: rem(36);
+        }
+      }
+      .equipe-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        img {
+          filter: drop-shadow(0px 0px 2px #bd0020);
+        }
+      }
+      img {
+        width: rem(70);
+        height: rem(70);
+        object-fit: contain;
+      }
+      .equipe-nom {
+        @include font_2_regular();
+        font-size: rem(14);
+      }
+    }
+  }
+}
+.match {
+  padding: rem(0) rem(195) rem(0) rem(195);
+  margin: rem(140) rem(0) rem(0) rem(0);
+  .resume {
+    h2 {
+      font-size: rem(30);
+      line-height: rem(45);
+    }
+    p {
+      font-size: rem(16);
+      line-height: rem(24);
+    }
+  }
+}
+
+.equipes-match {
+  padding: rem(66) rem(195) rem(0) rem(195);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: rem(66) rem(0) rem(66) rem(0);
+  .equipe-pres {
+    display: flex;
+    flex-direction: row;
+    &.une {
+      img {
+        filter: drop-shadow(0px 0px 5px #011a63);
+      }
+    }
+    &.deux {
+      margin: rem(85) rem(0) rem(0) rem(0);
+      img {
+        filter: drop-shadow(0px 0px 5px #bd0020);
+      }
+    }
+    .resume-equipe {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: rem(0) rem(0) rem(0) rem(20);
+      h3 {
+        line-height: rem(32);
+        margin: rem(0) rem(0) rem(16) rem(0);
+      }
+      p {
+        line-height: rem(24);
+        margin: rem(0) rem(0) rem(8) rem(0);
+      }
+    }
+    img {
+      width: rem(180);
+      height: rem(190);
+      max-width: none;
+      object-fit: contain;
+    }
+  }
+}

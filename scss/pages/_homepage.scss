@@ -143,6 +143,7 @@
       width: rem(787);
       padding: rem(0) rem(50) rem(0) rem(50);
       margin: 0 auto;
+      margin-bottom: rem(125);
       img {
         width: rem(200);
         object-fit: contain;
@@ -214,12 +215,130 @@
       }
     }
 
+    /* début du css pour le carousel ————————————————————————————————————————————————————————————————————————————————*/
+
+    .carousel__freefrontend {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .carousel__scene {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 440px;
+        height: 220px;
+        max-width: 95vw;
+        perspective: 240px;
+        .carousel__list {
+          width: 95%;
+          height: 170px;
+          padding: 0;
+          position: absolute;
+          transform: translateZ(-288px);
+          transform-style: preserve-3d;
+          transition: transform 1s;
+          list-style: none;
+          counter-reset: list-counter;
+          .carousel__cell {
+            position: absolute;
+            width: 420px;
+            height: 150px;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            color: white;
+            transition: transform 1.5s, opacity 1.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            counter-increment: list-counter;
+            background-color: rgba(7, 4, 4, 0.7);
+            img {
+              width: rem(390);
+              height: rem(140);
+              object-fit: contain;
+            }
+            &.selected {
+              border: 2px solid #a30000;
+              box-shadow: 0 0 6px 3px #a30000;
+            }
+          }
+        }
+      }
+      .carousel__controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-left: rem(50);
+        .previous-button,
+        .next-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 5px 0;
+          width: 50px;
+          height: 50px;
+          border: 2px solid #a30000;
+          border-radius: 50%;
+          background-color: transparent;
+          img {
+            width: 50%;
+          }
+        }
+
+        .previous-button {
+          img {
+            margin-bottom: 10%;
+            transform: rotate(-90deg);
+          }
+        }
+
+        .next-button {
+          img {
+            margin-top: 10%;
+            transform: rotate(90deg);
+          }
+        }
+
+        .previous-button:focus,
+        .next-button:focus {
+          outline: none;
+          box-shadow: 0 0 6px 3px $darkred;
+        }
+      }
+    }
+
+    .carousel__cell:nth-child(1) {
+      transform: rotateX(360deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(2) {
+      transform: rotateX(422deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(3) {
+      transform: rotateX(504deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(4) {
+      transform: rotateX(576deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(5) {
+      transform: rotateX(648deg) translateZ(288px);
+    }
+    .carousel__cell:nth-child(6) {
+      transform: rotateX(720deg) translateZ(288px);
+    }
+
+    /*  fin du css pour le carousel  ————————————————————————————————————————————————————————————————————————————————*/
+
     .ESPbtn3 {
       display: flex;
       justify-content: center;
       box-sizing: border-box;
       margin: 0 auto;
-      margin-top: rem(125);
+      margin-top: rem(60);
       a {
         display: block;
         width: fit-content;
